@@ -141,9 +141,17 @@
           <ellipse cx="128" cy="152" rx="10" ry="6" fill="#F7B6CE" opacity="0.9"/>
           <ellipse cx="192" cy="152" rx="10" ry="6" fill="#F7B6CE" opacity="0.9"/>
 
-          <!-- eyes -->
-          <path d="M118 134 Q126 122 136 132" stroke="#4A2545" stroke-width="4.5" fill="none" stroke-linecap="round"/>
-          <path d="M184 132 Q194 122 202 134" stroke="#4A2545" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+          <!-- eyebrows -->
+          <path d="M116 118 Q126 110 138 116" stroke="#4A2545" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.55"/>
+          <path d="M182 116 Q194 110 204 118" stroke="#4A2545" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.55"/>
+
+          <!-- eyes (a pupila segue o cursor do mouse) -->
+          <ellipse cx="127" cy="132" rx="10" ry="11" fill="#FFFFFF" stroke="#4A2545" stroke-width="3"/>
+          <ellipse cx="193" cy="132" rx="10" ry="11" fill="#FFFFFF" stroke="#4A2545" stroke-width="3"/>
+          <circle id="pupilLeft" cx="127" cy="132" r="4.4" fill="#4A2545"/>
+          <circle id="pupilRight" cx="193" cy="132" r="4.4" fill="#4A2545"/>
+          <circle cx="129.5" cy="129.5" r="1.3" fill="#FFFFFF" opacity="0.9"/>
+          <circle cx="195.5" cy="129.5" r="1.3" fill="#FFFFFF" opacity="0.9"/>
 
           <!-- nose+mouth -->
           <path d="M160 148 L154 154 Q160 160 166 154 Z" fill="#E85C8A"/>
@@ -193,6 +201,490 @@
              Q1150,0 1200,40
              L1200,90 L0,90 Z" fill="#FFF8F3"/>
   </svg>
+</section>
+
+<section class="menu" id="cardapio">
+
+  <div class="menu-bg" aria-hidden="true">
+    <span class="bg-blob blob-4"></span>
+    <span class="bg-blob blob-5"></span>
+  </div>
+
+  <div class="menu-inner">
+
+    <div class="menu-head">
+      <p class="eyebrow"><span class="dot"></span>Feito fresquinho todos os dias</p>
+      <h2 class="menu-script">Menu Fofura</h2>
+      <p class="menu-jp">今日のメニュー</p>
+      <h3 class="section-title">Nosso <span class="highlight">Cardápio</span></h3>
+      <p class="menu-desc">
+        Pratinhos japoneses, docinhos fofos e bebidas temáticas — tudo preparado
+        com carinho pelas nossas maids para deixar sua visita ainda mais especial.
+      </p>
+    </div>
+
+    <div class="menu-tabs" role="tablist" aria-label="Categorias do cardápio">
+      <button class="tab-btn is-active" type="button" role="tab" aria-selected="true" aria-controls="painel-pratos" id="tab-pratos" data-tab="pratos">🍚 Pratos</button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" aria-controls="painel-doces" id="tab-doces" data-tab="doces">🍰 Doces</button>
+      <button class="tab-btn" type="button" role="tab" aria-selected="false" aria-controls="painel-bebidas" id="tab-bebidas" data-tab="bebidas">🍵 Bebidas</button>
+    </div>
+
+    <div class="menu-panels">
+
+      <ul class="menu-grid is-active" id="painel-pratos" role="tabpanel" aria-labelledby="tab-pratos">
+        <li class="menu-item">
+          <div class="menu-item-top">
+            <h4 class="menu-item-name">Omurice Nyan~ <span class="badge">Favorito</span></h4>
+            <span class="menu-item-price">R$ 34,90</span>
+          </div>
+          <p class="menu-item-desc">Omelete fofinho sobre arroz ao molho demi-glace, com uma carinha de gatinho em ketchup.</p>
+        </li>
+        <li class="menu-item">
+          <div class="menu-item-top">
+            <h4 class="menu-item-name">Curry Udon da Casa</h4>
+            <span class="menu-item-price">R$ 32,90</span>
+          </div>
+          <p class="menu-item-desc">Udon quentinho em caldo cremoso de curry japonês, com legumes e tofu crocante.</p>
+        </li>
+        <li class="menu-item">
+          <div class="menu-item-top">
+            <h4 class="menu-item-name">Yakisoba da Maid</h4>
+            <span class="menu-item-price">R$ 29,90</span>
+          </div>
+          <p class="menu-item-desc">Macarrão salteado com legumes frescos e molho tarê, finalizado com gergelim tostado.</p>
+        </li>
+        <li class="menu-item">
+          <div class="menu-item-top">
+            <h4 class="menu-item-name">Bento Kawaii <span class="badge">Favorito</span></h4>
+            <span class="menu-item-price">R$ 38,90</span>
+          </div>
+          <p class="menu-item-desc">Combo do dia com proteína à escolha, arroz, missoshiru e uma sobremesa surpresa.</p>
+        </li>
+      </ul>
+
+      <ul class="menu-grid" id="painel-doces" role="tabpanel" aria-labelledby="tab-doces" hidden>
+        <li class="menu-item">
+          <div class="menu-item-top">
+            <h4 class="menu-item-name">Purin Fofinho <span class="badge">Favorito</span></h4>
+            <span class="menu-item-price">R$ 18,90</span>
+          </div>
+          <p class="menu-item-desc">Pudim de leite condensado com calda de caramelo e um chantininho decorado.</p>
+        </li>
+        <li class="menu-item">
+          <div class="menu-item-top">
+            <h4 class="menu-item-name">Pancake Nekomimi</h4>
+            <span class="menu-item-price">R$ 24,90</span>
+          </div>
+          <p class="menu-item-desc">Panqueca americana fofa com orelhinhas de gato em chantilly e frutas vermelhas.</p>
+        </li>
+        <li class="menu-item">
+          <div class="menu-item-top">
+            <h4 class="menu-item-name">Parfait Sakura</h4>
+            <span class="menu-item-price">R$ 26,90</span>
+          </div>
+          <p class="menu-item-desc">Camadas de sorvete de baunilha, morango e granola, finalizado com flor de sakura.</p>
+        </li>
+        <li class="menu-item">
+          <div class="menu-item-top">
+            <h4 class="menu-item-name">Cheesecake de Matcha</h4>
+            <span class="menu-item-price">R$ 22,90</span>
+          </div>
+          <p class="menu-item-desc">Cremoso, com base crocante e pó de matcha cerimonial por cima.</p>
+        </li>
+      </ul>
+
+      <ul class="menu-grid" id="painel-bebidas" role="tabpanel" aria-labelledby="tab-bebidas" hidden>
+        <li class="menu-item">
+          <div class="menu-item-top">
+            <h4 class="menu-item-name">Nekoccino <span class="badge">Favorito</span></h4>
+            <span class="menu-item-price">R$ 16,90</span>
+          </div>
+          <p class="menu-item-desc">Cappuccino cremoso com arte de leite em formato de gatinho.</p>
+        </li>
+        <li class="menu-item">
+          <div class="menu-item-top">
+            <h4 class="menu-item-name">Ramune Especial</h4>
+            <span class="menu-item-price">R$ 14,90</span>
+          </div>
+          <p class="menu-item-desc">Refrigerante japonês em sabores variados, servido na garrafinha clássica.</p>
+        </li>
+        <li class="menu-item">
+          <div class="menu-item-top">
+            <h4 class="menu-item-name">Milkshake Purin</h4>
+            <span class="menu-item-price">R$ 19,90</span>
+          </div>
+          <p class="menu-item-desc">Milkshake cremoso de caramelo com pedacinhos de pudim por dentro.</p>
+        </li>
+        <li class="menu-item">
+          <div class="menu-item-top">
+            <h4 class="menu-item-name">Chá Sakura Gelado</h4>
+            <span class="menu-item-price">R$ 15,90</span>
+          </div>
+          <p class="menu-item-desc">Chá floral levemente adocicado, servido com pétalas comestíveis.</p>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="menu" id="guia">
+  <div class="menu-bg" aria-hidden="true">
+    <span class="bg-blob blob-4"></span>
+    <span class="bg-blob blob-5"></span>
+  </div>
+
+  <div class="menu-inner">
+    <div class="menu-head">
+      <p class="eyebrow"><span class="dot"></span>Como funciona a experiência</p>
+      <h2 class="menu-script">Guia do Café</h2>
+      <p class="menu-jp">マナーガイド</p>
+      <h3 class="section-title">Regras de <span class="highlight">Convivência</span></h3>
+      <p class="menu-desc">
+        Para garantir uma visita mágica e inesquecível para todos os Goshujin-sama e Ojou-sama, confira o nosso guia de boas práticas.
+      </p>
+    </div>
+
+    <ul class="menu-grid is-active">
+      <li class="menu-item">
+        <div class="menu-item-top">
+          <h4 class="menu-item-name">1. Respeito às Maids <span class="badge">Importante</span></h4>
+        </div>
+        <p class="menu-item-desc">Trate nossa equipe sempre com gentileza. Fotos ou toque físico não são permitidos sem autorização expressa.</p>
+      </li>
+      <li class="menu-item">
+        <div class="menu-item-top">
+          <h4 class="menu-item-name">2. Feitiço Mágico</h4>
+        </div>
+        <p class="menu-item-desc">Antes de saborear sua refeição, faça o ritual "Oishiku naru, moe moe kyun!" com a sua maid para deixar o prato mais gostoso!</p>
+      </li>
+      <li class="menu-item">
+        <div class="menu-item-top">
+          <h4 class="menu-item-name">3. Fotografia e Mídia</h4>
+        </div>
+        <p class="menu-item-desc">Sinta-se à vontade para fotografar suas comidas e bebidas. Para fotos com as maids, consulte o cardápio de fotos instantâneas.</p>
+      </li>
+      <li class="menu-item">
+        <div class="menu-item-top">
+          <h4 class="menu-item-name">4. Jogos e Interação <span class="badge">Favorito</span></h4>
+        </div>
+        <p class="menu-item-desc">Você pode solicitar jogos de tabuleiro para a sua mesa e convidar uma maid para jogar uma partida rápida com você.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="menu" id="eventos">
+  <div class="menu-bg" aria-hidden="true">
+    <span class="bg-blob blob-4"></span>
+    <span class="bg-blob blob-5"></span>
+  </div>
+
+  <div class="menu-inner">
+    <div class="menu-head">
+      <p class="eyebrow"><span class="dot"></span>Programação Especial</p>
+      <h2 class="menu-script">Festas & Temas</h2>
+      <p class="menu-jp">イベント情報</p>
+      <h3 class="section-title">Próximos <span class="highlight">Eventos</span></h3>
+      <p class="menu-desc">
+        Acompanhe nossos dias temáticos, apresentações de dança e edições limitadas no Kawaii Cafe.
+      </p>
+    </div>
+
+    <ul class="menu-grid is-active">
+      <li class="menu-item">
+        <div class="menu-item-top">
+          <h4 class="menu-item-name">Festival de Sakura <span class="badge">Especial</span></h4>
+          <span class="menu-item-price">15 de Março</span>
+        </div>
+        <p class="menu-item-desc">Decoração inteiramente inspirada nas flores de cerejeira, menu especial de primavera e brindes exclusivos.</p>
+      </li>
+      <li class="menu-item">
+        <div class="menu-item-top">
+          <h4 class="menu-item-name">Noite dos Jogos de Tabuleiro</h4>
+          <span class="menu-item-price">Toda Quinta</span>
+        </div>
+        <p class="menu-item-desc">Desafie seus amigos e as maids em torneios rápidos com prêmios fofos para os vencedores.</p>
+      </li>
+      <li class="menu-item">
+        <div class="menu-item-top">
+          <h4 class="menu-item-name">Maid Pyjama Party <span class="badge">Favorito</span></h4>
+          <span class="menu-item-price">28 de Março</span>
+        </div>
+        <p class="menu-item-desc">Um dia super aconchegante com as maids vestidas em pijama kigurumi, servindo doces e milkshakes especiais.</p>
+      </li>
+      <li class="menu-item">
+        <div class="menu-item-top">
+          <h4 class="menu-item-name">Aniversário do Kawaii Cafe</h4>
+          <span class="menu-item-price">10 de Abril</span>
+        </div>
+        <p class="menu-item-desc">Comemoração com bolo especial, apresentações ao vivo e fotos polaroid comemorativas.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="contact" id="contato">
+
+  <div class="contact-bg" aria-hidden="true">
+    <span class="bg-blob blob-4"></span>
+    <span class="bg-blob blob-5"></span>
+  </div>
+
+  <div class="contact-inner">
+
+    <div class="contact-intro">
+      <p class="eyebrow"><span class="dot"></span>Fale com a gente</p>
+
+      <h2 class="section-title">Vamos <span class="highlight">conversar</span>?</h2>
+
+      <p class="section-desc">
+        Dúvidas, reservas especiais para aniversário ou só quer mandar um "nya~"?
+        Escreve pra gente que a equipe responde rapidinho, ou chama no WhatsApp
+        que a resposta é ainda mais fofa.
+      </p>
+
+      <ul class="contact-list">
+        <li>
+          <span class="contact-icon" aria-hidden="true">📍</span>
+          <div>
+            <strong>Endereço</strong>
+            <span>Rua das Sakuras, 123 — Centro, Porto Alegre/RS</span>
+          </div>
+        </li>
+        <li>
+          <span class="contact-icon" aria-hidden="true">🕐</span>
+          <div>
+            <strong>Horário</strong>
+            <span>Terça a domingo, das 12h às 22h</span>
+          </div>
+        </li>
+        <li>
+          <span class="contact-icon" aria-hidden="true">📞</span>
+          <div>
+            <strong>Telefone / WhatsApp</strong>
+            <span>(51) 99999-0000</span>
+          </div>
+        </li>
+        <li>
+          <span class="contact-icon" aria-hidden="true">✉️</span>
+          <div>
+            <strong>E-mail</strong>
+            <span>ola@kawaiicafe.com.br</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="contact-social">
+        <a href="#" class="social-btn" aria-label="Instagram do Kawaii Cafe">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <rect x="3" y="3" width="18" height="18" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+            <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/>
+            <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/>
+          </svg>
+        </a>
+        <a href="#" class="social-btn" aria-label="WhatsApp do Kawaii Cafe">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path d="M12 3a9 9 0 0 0-7.8 13.4L3 21l4.7-1.2A9 9 0 1 0 12 3Z" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M8.3 8.7c.2-.6.6-.6 1-.6h.6c.2 0 .5 0 .7.5s.7 1.7.8 1.8.1.3 0 .5-.2.3-.4.5-.4.4-.2.7c.2.3.9 1.4 1.9 2.3s1.6.9 1.9 1c.3.1.5.1.7-.1s.8-.9 1-1.2.4-.3.7-.2 1.7.8 2 1 .5.3.5.5-.1 1-.6 1.6-1.4 1.1-2.3 1c-.9-.1-2.7-1-3.7-2.1s-1.9-2.3-2.2-2.8-.4-1 0-1.6c.2-.3.3-.5.4-.7Z" fill="currentColor"/>
+          </svg>
+        </a>
+        <a href="#" class="social-btn" aria-label="TikTok do Kawaii Cafe">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path d="M14.5 3v9.6a2.9 2.9 0 1 1-2.1-2.8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M14.5 3.3c.3 2 1.8 3.5 3.8 3.7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="form-row">
+        <label class="field">
+          <span>Nome</span>
+          <input type="text" name="nome" autocomplete="name" required placeholder="Como podemos te chamar?">
+        </label>
+        <label class="field">
+          <span>E-mail</span>
+          <input type="email" name="email" autocomplete="email" required placeholder="seu@email.com">
+        </label>
+      </div>
+
+      <label class="field">
+        <span>Assunto</span>
+        <select name="assunto">
+          <option>Reserva de mesa</option>
+          <option>Eventos e aniversários</option>
+          <option>Parcerias</option>
+          <option>Outro assunto</option>
+        </select>
+      </label>
+
+      <label class="field">
+        <span>Mensagem</span>
+        <textarea name="mensagem" rows="4" required placeholder="Conta pra gente o que você precisa..."></textarea>
+      </label>
+
+      <button type="submit" class="btn btn-primary">
+        Enviar mensagem
+        <span aria-hidden="true">🐾</span>
+      </button>
+
+      <p class="form-note" id="contactFormNote" role="status" aria-live="polite"></p>
+    </form>
+
+  </div>
+</section>
+
+<section class="faq" id="faq">
+
+  <div class="faq-bg" aria-hidden="true">
+    <span class="bg-blob blob-7"></span>
+  </div>
+
+  <div class="faq-inner">
+
+    <div class="faq-head">
+      <p class="eyebrow"><span class="dot"></span>Tire suas dúvidas</p>
+      <h2 class="menu-script">Nya~ Dúvidas?</h2>
+      <p class="menu-jp">よくある質問</p>
+      <h3 class="section-title">Perguntas <span class="highlight">Frequentes</span></h3>
+      <p class="menu-desc">
+        Separamos as dúvidas mais comuns dos nossos Goshujin-sama e Ojou-sama.
+        Não encontrou sua pergunta? Fale com a gente na seção de contato!
+      </p>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false">
+          <span>Preciso reservar mesa com antecedência?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Recomendamos reservar com pelo menos 1 dia de antecedência, principalmente aos finais de semana e em dias de eventos temáticos, já que nossas vagas são limitadas por horário.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false">
+          <span>Existe cobrança de couvert ou taxa de entrada?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Cobramos apenas uma pequena taxa de serviço por mesa, que já inclui a interação com as maids e os jogos de tabuleiro. O valor é informado no momento da confirmação da reserva.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false">
+          <span>Posso tirar fotos com as maids?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Sim! Fotos das comidas e do ambiente são sempre bem-vindas. Para fotos com as maids, é só consultar o cardápio de fotos instantâneas com a equipe durante sua visita.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false">
+          <span>O café tem opções vegetarianas?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Temos pratos e doces vegetarianos no cardápio. Se você tiver alguma restrição alimentar específica, é só avisar no campo de observações da reserva.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false">
+          <span>Crianças podem frequentar o Kawaii Cafe?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Com certeza! O Kawaii Cafe é um ambiente familiar. Crianças acompanhadas dos responsáveis são super bem-vindas, especialmente na Noite dos Jogos de Tabuleiro.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" type="button" aria-expanded="false">
+          <span>Como funciona o cancelamento da reserva?</span>
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer">
+          <p>Basta entrar em contato pelo telefone ou WhatsApp informado na seção de contato com pelo menos 2 horas de antecedência para cancelar ou remarcar sua reserva sem qualquer transtorno.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="reservas" id="reservar">
+
+  <div class="reservas-bg" aria-hidden="true">
+    <span class="bg-blob blob-6"></span>
+  </div>
+
+  <div class="reservas-inner">
+
+    <div class="reservas-info">
+      <p class="eyebrow"><span class="dot"></span>Vagas limitadas por horário</p>
+      <h3 class="section-title">Reserve sua <span class="highlight">mesa</span></h3>
+      <p class="reservas-desc">
+        Garanta seu lugarzinho no Kawaii Cafe! Preencha o formulário e nossa
+        equipe confirma sua reserva com você por telefone ou WhatsApp.
+      </p>
+
+      <ul class="reservas-details">
+        <li>
+          <strong>Horário de funcionamento</strong>
+          <span>Terça a domingo, das 12h às 22h</span>
+        </li>
+        <li>
+          <strong>Endereço</strong>
+          <span>Rua das Sakuras, 128 — Centro</span>
+        </li>
+        <li>
+          <strong>Contato</strong>
+          <span>(51) 99999-0000</span>
+        </li>
+      </ul>
+    </div>
+
+    <form class="reservas-form" id="reservaForm" novalidate>
+      <div class="form-row">
+        <label for="reservaNome">Nome
+          <input type="text" id="reservaNome" name="nome" placeholder="Seu nome" required>
+        </label>
+        <label for="reservaTelefone">Telefone
+          <input type="tel" id="reservaTelefone" name="telefone" placeholder="(51) 90000-0000" required>
+        </label>
+      </div>
+      <div class="form-row">
+        <label for="reservaData">Data
+          <input type="date" id="reservaData" name="data" required>
+        </label>
+        <label for="reservaHorario">Horário
+          <input type="time" id="reservaHorario" name="horario" required>
+        </label>
+      </div>
+      <label for="reservaPessoas">Número de pessoas
+        <input type="number" id="reservaPessoas" name="pessoas" min="1" max="20" value="2" required>
+      </label>
+      <label for="reservaObs">Observações
+        <textarea id="reservaObs" name="observacoes" rows="3" placeholder="Ex.: aniversário, restrição alimentar, tema favorito..."></textarea>
+      </label>
+      <button type="submit" class="btn btn-primary">
+        Confirmar reserva
+        <span aria-hidden="true">→</span>
+      </button>
+      <p class="form-note" id="reservaFormNote" role="status" aria-live="polite"></p>
+    </form>
+
+  </div>
 </section>
 
 
