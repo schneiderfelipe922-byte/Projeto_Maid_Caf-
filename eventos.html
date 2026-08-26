@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eventos — Kawaii Cafe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="card.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html#top" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 60 60" width="42" height="42">
+          <path d="M12 20 C10 8, 22 6, 24 16 Z" fill="#4A2545"/>
+          <path d="M48 20 C50 8, 38 6, 36 16 Z" fill="#4A2545"/>
+          <circle cx="30" cy="32" r="18" fill="#4A2545"/>
+          <circle cx="24" cy="30" r="1.8" fill="#FFD3E4"/>
+          <circle cx="36" cy="30" r="1.8" fill="#FFD3E4"/>
+          <path d="M27 37 Q30 40 33 37" stroke="#FFD3E4" stroke-width="1.6" fill="none" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="brand-text">
+        <span class="brand-name">Kawaii Cafe</span>
+        <span class="brand-sub">かわいいカフェ</span>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
+      <ul>
+        <li><a href="index.html#top" class="nav-link"><span class="paw" aria-hidden="true">🐾</span>Home</a></li>
+        <li><a href="index.html#cardapio" class="nav-link">Cardápio</a></li>
+        <li><a href="guia.html" class="nav-link">Guia</a></li>
+        <li><a href="eventos.html" class="nav-link is-active"><span class="paw" aria-hidden="true">🐾</span>Eventos</a></li>
+        <li><a href="index.html#equipe" class="nav-link">Nossa Equipe</a></li>
+        <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+        <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+      </ul>
+    </nav>
+
+    <a href="index.html#reservar" class="btn btn-nav-cta">Reservar mesa</a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+<section class="menu" id="eventos">
+  <div class="menu-bg" aria-hidden="true">
+    <span class="bg-blob blob-4"></span>
+    <span class="bg-blob blob-5"></span>
+  </div>
+
+  <div class="menu-inner">
+    <div class="menu-head">
+      <p class="eyebrow"><span class="dot"></span>Programação Especial</p>
+      <h2 class="menu-script">Festas & Temas</h2>
+      <p class="menu-jp">イベント情報</p>
+      <h3 class="section-title">Próximos <span class="highlight">Eventos</span></h3>
+      <p class="menu-desc">
+        Acompanhe nossos dias temáticos, apresentações de dança e edições limitadas no Kawaii Cafe.
+      </p>
+    </div>
+
+    <ul class="menu-grid is-active">
+      <li class="menu-item">
+        <div class="menu-item-top">
+          <h4 class="menu-item-name">Festival de Sakura <span class="badge">Especial</span></h4>
+          <span class="menu-item-price">15 de Março</span>
+        </div>
+        <p class="menu-item-desc">Decoração inteiramente inspirada nas flores de cerejeira, menu especial de primavera e brindes exclusivos.</p>
+      </li>
+      <li class="menu-item">
+        <div class="menu-item-top">
+          <h4 class="menu-item-name">Noite dos Jogos de Tabuleiro</h4>
+          <span class="menu-item-price">Toda Quinta</span>
+        </div>
+        <p class="menu-item-desc">Desafie seus amigos e as maids em torneios rápidos com prêmios fofos para os vencedores.</p>
+      </li>
+      <li class="menu-item">
+        <div class="menu-item-top">
+          <h4 class="menu-item-name">Maid Pyjama Party <span class="badge">Favorito</span></h4>
+          <span class="menu-item-price">28 de Março</span>
+        </div>
+        <p class="menu-item-desc">Um dia super aconchegante com as maids vestidas em pijama kigurumi, servindo doces e milkshakes especiais.</p>
+      </li>
+      <li class="menu-item">
+        <div class="menu-item-top">
+          <h4 class="menu-item-name">Aniversário do Kawaii Cafe</h4>
+          <span class="menu-item-price">10 de Abril</span>
+        </div>
+        <p class="menu-item-desc">Comemoração com bolo especial, apresentações ao vivo e fotos polaroid comemorativas.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
